@@ -6,6 +6,7 @@
 const path = require('path');
 //编辑目录
 const srcPath = path.join(__dirname, '/../src');
+
 //默认的端口
 const defaultPort = 8080;
 
@@ -26,13 +27,13 @@ function getDefaultModules() {
         // ],
         loaders: [
             {
-                test: '/\.js?$/',
+                test: /\.js$/,
                 loader: 'babel-loader',
                 include: srcPath,
                 exclude: /node_modules/
             },
             {
-                test: '/\.json?$/',
+                test: /\.json$/,
                 loader: 'json-loader'
             },
             {

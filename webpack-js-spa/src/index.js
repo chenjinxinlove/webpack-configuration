@@ -4,4 +4,4 @@
 import {aaa, json} from 'js/test';
 
 alert(aaa);
-alert(json);
+alert('ssss')

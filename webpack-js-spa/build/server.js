@@ -3,7 +3,7 @@
 
 const webpack = require('webpack');
 const WebpackDevServer = require('webpack-dev-server');
-const config = require('./../webpack.config.js');
+const config = require('./config.js');
 const open = require('open');
 
 /**
