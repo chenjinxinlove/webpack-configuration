@@ -32,7 +32,7 @@ let config = Object.assign({}, baseConfig, {
     module: defaultModules.getDefaultModules(),
     postcss:[autoprefixer({browsers:['last 4 versions']})],
     externals: {
-        jquery: 'window.$'
+        'jquery': '$'
     }
 });
 

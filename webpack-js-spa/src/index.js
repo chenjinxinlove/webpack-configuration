@@ -1,8 +1,8 @@
 require('./css/css.sass');
+require('./css/hh.css');
 
 import {json} from 'js/test';
-var $ = require('jquery');
-
+import $ from 'jquery';
 $(function () {
     console.log(json);
 });
