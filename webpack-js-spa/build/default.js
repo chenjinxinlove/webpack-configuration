@@ -7,6 +7,7 @@ const path = require('path');
 //编辑目录
 const srcPath = path.join(__dirname, '/../src');
 
+
 //默认的端口
 const defaultPort = 8080;
 
@@ -17,15 +18,16 @@ const defaultPort = 8080;
 
 function getDefaultModules() {
     return {
-        // preLoaders: [
-        //     {
-        //         test: /\.js$/,
-        //         loader: 'eslint-loader',
-        //         include: srcPath,
-        //         exclude: /node_modules/
-        //     }
-        // ],
+        preLoaders: [
+            {
+                test: /\.js$/,
+                loader: 'eslint-loader',
+                include: srcPath,
+                exclude: /node_modules/
+            }
+        ],
         loaders: [
+            { test: /\.hbs$/, loader: "handlebars-loader" },
             {
                 test: /\.js$/,
                 loader: 'babel-loader',
@@ -38,15 +40,15 @@ function getDefaultModules() {
             },
             {
                 test: /\.css$/,
-                loader: 'style-loader!css-loader'
+                loader: 'style-loader!css-loader!postcss-loader'
             },
             {
-                test: /\.sass/,
-                loader: 'style-loader!css-loader!sass-loader?outputStyle=expanded&indentedSyntax'
+                test: /\.sass$/,
+                loader: 'style-loader!css-loader!postcss-loader!sass-loader?outputStyle=expanded&indentedSyntax'
             },
             {
-                test: /\.scss/,
-                loader: 'style-loader!css-loader!sass-loader?outputStyle=expanded'
+                test: /\.scss$/,
+                loader: 'style-loader!css-loader!postcss-loader!sass-loader?outputStyle=expanded'
             },
             {
                 test: /\.(png|jpg|gif|svg|woff|woff2)$/,

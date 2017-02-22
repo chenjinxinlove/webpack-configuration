@@ -6,7 +6,8 @@ let path = require('path');
 let webpack = require('webpack');
 let baseConfig = require('./base');
 let defaultModules = require('./default');
-
+let autoprefixer = require('autoprefixer');
+let HtmlWebpackPlugin = require('html-webpack-plugin');
 let BowerWebpackPlugin = require('bower-webpack-plugin');
 
 let config = Object.assign({}, baseConfig, {
@@ -15,15 +16,24 @@ let config = Object.assign({}, baseConfig, {
         'webpack/hot/only-dev-server',
         './src/index'
     ],
-    cache: true,
+    cache: false,
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoErrorsPlugin(),
         new BowerWebpackPlugin({
             searchResolveModulesDirectories: false
+        }),
+        new HtmlWebpackPlugin({
+            template: defaultModules.srcPath + '/index.html',
+            hash:true,
+            inject: 'body'
         })
     ],
-    module: defaultModules.getDefaultModules()
+    module: defaultModules.getDefaultModules(),
+    postcss:[autoprefixer({browsers:['last 4 versions']})],
+    externals: {
+        jquery: 'window.$'
+    }
 });
 
 

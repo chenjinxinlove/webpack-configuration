@@ -1,7 +1,8 @@
-/**
- * Created by chen on 2017/2/20.
- */
-import {aaa, json} from 'js/test';
+require('./css/css.sass');
 
-alert(aaa);
-alert('ssss')
+import {json} from 'js/test';
+var $ = require('jquery');
+
+$(function () {
+    console.log(json);
+});

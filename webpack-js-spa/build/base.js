@@ -16,8 +16,8 @@ module.exports = {
     devServer: {
         contentBase: defaultModules.srcPath,
         historyApiFallback: true,
+        colors:true,
         compress: true,
-        hot: true,
         port: defaultModules.port,
         publicPath: defaultModules.publicPath,
         noInfo: false
