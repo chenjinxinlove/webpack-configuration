@@ -36,5 +36,15 @@ let config = Object.assign({}, baseConfig, {
     }
 });
 
+config.module.loaders.push({
+    test: /\.css$/,
+    loader: 'style-loader!css-loader!postcss-loader'
+},{
+    test: /\.scss$/,
+    loader: 'style-loader!css-loader!postcss-loader!sass-loader?outputStyle=expanded'
+},{
+    test: /\.sass$/,
+    loader: 'style-loader!css-loader!postcss-loader!sass-loader?outputStyle=expanded&indentedSyntax'
+});
 
 module.exports = config;
