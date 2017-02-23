@@ -1,0 +1,11 @@
+{
+  "name": "gulp-webpack-weixin",
+  "version": "1.0.0",
+  "description": "gulp与webpack配合配置微信小程序的工程化",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "chenjinxinlove",
+  "license": "ISC"
+}

@@ -56,7 +56,7 @@ let config = Object.assign({}, baseConfig, {
         }])
     ],
     module: defaultSettings.getDefaultModules(),
-    postcss:[autoprefixer({browsers:['last 4 versions']})],
+    postcss:[autoprefixer({browsers:['last 4 version', 'safari 5', 'opera 12.1', 'ios 6', 'android 4']})],
     externals: {
         'jquery': '$'
     }
