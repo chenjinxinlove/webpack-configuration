@@ -26,7 +26,8 @@ let config = Object.assign({}, baseConfig, {
         new HtmlWebpackPlugin({
             template: defaultModules.srcPath + '/index.html',
             hash:true,
-            inject: 'body'
+            inject: 'body',
+            title:'chen'
         })
     ],
     module: defaultModules.getDefaultModules(),

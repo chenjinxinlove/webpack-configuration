@@ -37,7 +37,8 @@ let config = Object.assign({}, baseConfig, {
             template: __dirname + '/../src/index.html',
             filename: __dirname + '/../dist/index.html',
             hash:true,
-            inject: 'body'
+            inject: 'body',
+            title:'chen'
         }),
         // new CopyWebpackPlugin([{
         //     from: __dirname + '/../src/index.html',
