@@ -40,11 +40,6 @@ let config = Object.assign({}, baseConfig, {
             inject: 'body',
             title:'chen'
         }),
-        // new CopyWebpackPlugin([{
-        //     from: __dirname + '/../src/index.html',
-        //     to:__dirname + '/../dist',
-        //     force: true
-        // }]),
         new CopyWebpackPlugin([{
             from: __dirname + '/../src/favicon.ico',
             to:__dirname + '/../dist',
