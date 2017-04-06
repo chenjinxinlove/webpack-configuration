@@ -3,7 +3,9 @@
   "version": "2.0.0",
   "author": "chenjinxinlove",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "gulp dev",
+    "dist": "gulp dist",
+    "clear": "gulp clear"
   },
   "devDependencies": {
     "babel-core": "^6.14.0",
