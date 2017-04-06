@@ -32,18 +32,18 @@ module.exports = {
         filename: "[name].js",
         chunkFilename: "[chunkhash].js"
     },
-    module: {
-        preLoaders: [
-            {
-                test: /\.js$/,
-                loader: 'eslint-loader',
-                exclude: /node_modules/
-            }
-        ],
-        loaders: [
-            { test: /\.js$/, loader: 'babel', exclude: /node_modules/ },
-        ]
-    },
+    // module: {
+    //     preLoaders: [
+    //         {
+    //             test: /\.js$/,
+    //             loader: 'eslint-loader',
+    //             exclude: /node_modules/
+    //         }
+    //     ],
+    //     loaders: [
+    //         { test: /\.js$/, loader: 'babel', exclude: /node_modules/ },
+    //     ]
+    // },
     resolve: {
         alias: {
             jquery: srcDir + "/js/lib/jquery.min.js",
@@ -63,7 +63,7 @@ module.exports = {
         "presets": ["es2015", 'stage-2'],
         "plugins": ["transform-runtime"]
     },
-  externals: {
-    'jquery': '$'
-  }
+    externals: {
+      'jquery': '$'
+    }
 };

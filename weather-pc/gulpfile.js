@@ -18,7 +18,8 @@ var gulp = require('gulp'),
     webpack = require('webpack'),
     webpackConfig = require('./webpack.config.js'),
     watch = require('gulp-watch'),
-    connect = require('gulp-connect');
+    connect = require('gulp-connect'),
+    autoprefixer = require('gulp-autoprefixer');
 
 var host = {
     path: 'dist/',
@@ -30,8 +31,6 @@ var host = {
 var browser = os.platform() === 'linux' ? 'Google chrome' : (
   os.platform() === 'darwin' ? 'Google chrome' : (
   os.platform() === 'win32' ? 'chrome' : 'firefox'));
-var pkg = require('./package.json');
-
 var src  = {
     fonts: './src/**/*.{eot,svg,ttf,woff}',
     images: './src/**/*.{png,jpg,jpeg,svg}',
@@ -45,34 +44,35 @@ var src  = {
 gulp.task('copy:images', function (done) {
     gulp.src(['src/images/**/*']).pipe(gulp.dest('dist/images')).on('end', done);
 });
-
-//压缩合并css, css中既有自己写的.sass, 也有引入第三方库的.css
 //压缩合并css, css中既有自己写的.less, 也有引入第三方库的.css
 gulp.task('sassmin', function (done) {
   gulp.src([src.sass, 'src/css/*.css'])
     .pipe(sass())
     //这里可以加css sprite 让每一个css合并为一个雪碧图
-    //.pipe(spriter({}))
+    .pipe(spriter({}))
+    //自动前缀
+    .pipe(autoprefixer({
+      browsers: ['> 5%', 'Android >= 4.0'],
+      cascade: true, //是否美化属性值 默认：true 像这样：
+      remove:true //是否去掉不必要的前缀 默认：true
+    }))
+    .pipe(cssmin())
     .pipe(concat('style.min.css'))
     .pipe(gulp.dest('dist/css/'))
     .pipe(connect.reload())
     .on('end', done);
 });
-
-function compileSass(src, dist) {
-    return gulp.src(src)
-        .pipe(sass().on('error', sass.logError))
-        .pipe(base64({
-            extensions: ['png', /\.jpg#datauri$/i],
-            maxImageSize: 10 * 1024
-        }))
-        .pipe(rename({
-            extname: ".css"
-        }))
-        .pipe(gulp.dest(dist))
-}
-
-
+//用于在html文件中直接include文件
+gulp.task('fileinclude', function (done) {
+  gulp.src([src.pages])
+    .pipe(fileinclude({
+      prefix: '@@',
+      basepath: '@file'
+    }))
+    .pipe(gulp.dest('dist/pages'))
+    .on('end', done)
+    .pipe(connect.reload());
+});
 //将js加上10位md5,并修改html中的引用路径，该动作依赖build-js
 gulp.task('md5:js', ['build-js'], function (done) {
     gulp.src('dist/js/*.js')
@@ -80,7 +80,6 @@ gulp.task('md5:js', ['build-js'], function (done) {
         .pipe(gulp.dest('dist/js'))
         .on('end', done);
 });
-
 //将css加上10位md5，并修改html中的引用路径，该动作依赖sprite
 gulp.task('md5:css', ['sprite'], function (done) {
     gulp.src('dist/css/*.css')
@@ -88,19 +87,6 @@ gulp.task('md5:css', ['sprite'], function (done) {
         .pipe(gulp.dest('dist/css'))
         .on('end', done);
 });
-
-//用于在html文件中直接include文件
-gulp.task('fileinclude', function (done) {
-    gulp.src([src.pages])
-        .pipe(fileinclude({
-          prefix: '@@',
-          basepath: '@file'
-        }))
-        .pipe(gulp.dest('dist/pages'))
-        .on('end', done)
-        .pipe(connect.reload());
-});
-
 //雪碧图操作，应该先拷贝图片并压缩合并css
 gulp.task('sprite', ['copy:images', 'sassmin'], function (done) {
     var timestamp = +new Date();
@@ -117,45 +103,28 @@ gulp.task('sprite', ['copy:images', 'sassmin'], function (done) {
         .pipe(gulp.dest('dist/css'))
         .on('end', done);
 });
-
 //处理字体
 gulp.task('fonts', function () {
     watch([src.fonts]).on('change', function () {
-        fonts()
+      gulp.src(src.fonts)
+        .pipe(gulp.dest(dist));
     }).on('add', function () {
-        fonts();
+      gulp.src(src.fonts)
+        .pipe(gulp.dest(dist));
     })
 });
-
-function fonts() {
-    gulp.src(src.fonts)
-        .pipe(gulp.dest(dist));
-}
 //处理json
 gulp.task('json', function () {
     watch([src.json]).on('change', function () {
-        json()
+      gulp.src(src.json)
+        .pipe(gulp.dest(dist))
     });
 });
-
-function json() {
-    gulp.src(src.json)
-        .pipe(gulp.dest(dist))
-}
-
-
 gulp.task('clean', function (done) {
     gulp.src(['dist'])
         .pipe(clean())
         .on('end', done);
 });
-
-gulp.task('watch', function (done) {
-    gulp.watch('src/**/*', ['sassmin', 'build-js', 'fileinclude'])
-    .pipe(connect.reload())
-        .on('end', done);
-});
-
 gulp.task('connect', function () {
     console.log('connect------------');
     connect.server({
@@ -164,7 +133,6 @@ gulp.task('connect', function () {
         livereload: true
     });
 });
-
 gulp.task('open', function (done) {
     gulp.src('')
         .pipe(gulpOpen({
@@ -173,9 +141,7 @@ gulp.task('open', function (done) {
         }))
         .on('end', done);
 });
-
 var myDevConfig = Object.create(webpackConfig);
-
 var devCompiler = webpack(myDevConfig);
 
 //引用webpack对js进行操作
@@ -190,10 +156,10 @@ gulp.task("build-js", ['fileinclude'], function(callback) {
 });
 
 //发布
-gulp.task('dist', ['connect', 'fileinclude', 'md5:css', 'md5:js', 'open']);
+gulp.task('dist', ['fileinclude', 'md5:css', 'md5:js']);
 
 //开发
-gulp.task('dev', ['connect', 'copy:images', 'fileinclude', 'sassmin', 'build-js', 'watch', 'open' ,'fonts', 'json']);
+gulp.task('dev', ['connect', 'copy:images', 'fileinclude', 'sassmin', 'build-js', 'open' ,'fonts', 'json']);
 
 //清除
 gulp.task('clean', function () {del(['dist/**/*']);});
