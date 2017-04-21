@@ -14,25 +14,25 @@ var ftpConfig = {
   pathN : pathN,
   //内网ftp地址
   nw: {
-    host: '10.0.120.212',
+    host: '去',
     user: 'program',
-    pass: '78RVBpRGuvY3NX8febOm',
-    remotePath:'/ser/www/chenjinxin/' + pathN
+    pass: ' ',
+    remotePath:'的/' + pathN
   },
   //外网ftp地址
   ww:{
-    host: '61.4.185.120',
-    user: 'chenjinxin',
-    port:'2222',
-    pass: 'DkIYCQ3E3oUh1ZnOk7oD',
-    remotePath:'/ser/www/bbs/htdocs/ski/' + pathN
+    host: '61 .120',
+    user: 'c nxin',
+    port:'2 2',
+    pass: 'Dk出h1ZnOk7oD',
+    remotePath:'出' + pathN
   },
   //微信
   wx:{
-    host: '61.4.185.222',
-    user: 'chenjinxin',
-    pass: 'hzXUNdP7nswzC0nfaElE',
-    remotePath:'/wx/' + pathN +'/'
+    host: ' 2',
+    user: 'ch in',
+    pass: ' 7nswzC0nfaElE',
+    remotePath:'/ ' + pathN +'/'
   }
 }
 
