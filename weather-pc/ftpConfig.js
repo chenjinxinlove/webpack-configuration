@@ -11,29 +11,25 @@ function transformStr3(str){
   });
 }
 var ftpConfig = {
-  pathN : pathN,
-  //内网ftp地址
-  nw: {
-    host: '去',
-    user: 'program',
-    pass: ' ',
-    remotePath:'的/' + pathN
-  },
+  pathN: pathN,
   //外网ftp地址
   ww:{
-    host: '61 .120',
-    user: 'c nxin',
-    port:'2 2',
-    pass: 'Dk出h1ZnOk7oD',
-    remotePath:'出' + pathN
+    host: 'xx.xx.xx.xx',
+    user: 'xx',
+    pass: 'xx',
+    port:'xxxx',
+    remotePath:'xx' + pathN
   },
+  wwUrl: 'xxxx',
   //微信
   wx:{
-    host: ' 2',
-    user: 'ch in',
-    pass: ' 7nswzC0nfaElE',
-    remotePath:'/ ' + pathN +'/'
-  }
-}
+    host: 'xx.xx.xx.xx',
+    user: 'xx',
+    pass: 'xx',
+    port:'xxxx',
+    remotePath:'xx' + pathN
+  },
+  wxUrl : 'xxxx'
+};
 
 module.exports = ftpConfig;
