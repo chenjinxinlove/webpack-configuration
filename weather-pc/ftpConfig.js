@@ -14,7 +14,7 @@ var ftpConfig = {
   pathN: pathN,
   //外网ftp地址
   ww:{
-    host: 'xx.xx.xx.xx',
+    host: 'xx.xx.xx.xjx',
     user: 'xx',
     pass: 'xx',
     port:'xxxx',
