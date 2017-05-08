@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="dns-prefetch" href="http://i.tq121.com.cn">
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>【海淀天气】海淀今天天气预报,今天,今天天气,7天,15天天气预报,天气预报一周,天气预报15天查询</title>
+  <meta http-equiv="Content-Language" content="zh-cn">
+  <meta name="keywords" content="海淀天气预报,海淀今日天气,海淀周末天气,海淀一周天气预报,海淀15日天气预报,海淀40日天气预报" />
+  <meta name="description" content="海淀天气预报，及时准确发布中央气象台天气信息，便捷查询北京今日天气，海淀周末天气，海淀一周天气预报，海淀15日天气预报，海淀40日天气预报，海淀天气预报还提供海淀各区县的生活指数、健康指数、交通指数、旅游指数，及时发布海淀气象预警信号、各类气象资讯。" />
+  <meta name="msapplication-task" content="name=天气资讯;action-uri=http://www.weather.com.cn/news/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+  <meta name="msapplication-task" content="name=生活天气;action-uri=http://www.weather.com.cn/life/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+  <meta name="msapplication-task" content="name=气象科普;action-uri=http://www.weather.com.cn/science/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+  <meta name="msapplication-task" content="name=灾害预警;action-uri=http://www.weather.com.cn/alarm/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+  <meta name="msapplication-task" content="name=旅游天气;action-uri=http://www.weather.com.cn/trip/index.shtml;icon-uri=http://www.weather.com.cn/favicon.ico" />
+
+</head>
+<body>
+<input id="colorid" type="hidden" value="预报">
+<input id="colorids" value="http://www.weather.com.cn/forecast/" type="hidden">
+@@include('commom/top_2016.html')
+@@include('commom/header_2016.html')
+
+<div class="tong">
+  <img src="./i/t.png">
+</div>
+<div class="weather_location">
+	<span>
+    	<a href="#">全国</a>
+    </span>
+  >
+  <span>
+    	<a href="#">北京</a>
+        <i class="weather_image"></i>
+    </span>
+  >
+  <span>
+    	<a href="#">城区</a>
+        <i class="weather_image"></i>
+    </span>
+  <div class="weather_lo_box">
+    <a href="#">东城</a>
+    <a href="#">东城</a>
+    <a href="#">东城</a>
+    <a href="#">东城</a>
+    <a href="#">东城</a>
+    <a href="#">东城</a>
+    <a href="#">东城</a>
+    <a href="#">东城</a>
+    <a href="#">东城</a>
+    <a href="#">东城</a>
+    <a href="#">东城</a>
+    <a href="#">东城</a>
+    <a href="#">东城</a>
+    <a href="#">东城</a>
+    <a href="#">东城</a>
+    <a href="#">东城</a>
+    <a href="#">东城</a>
+    <a href="#">东城</a>
+    <a href="#">东城</a>
+    <a href="#">东城</a>
+    <a href="#">东城</a>
+    <a href="#">东城</a>
+    <a href="#">东城</a>
+    <a href="#">东城</a>
+    <a href="#">东城</a>
+    <a href="#">东城</a>
+    <a href="#">东城</a>
+    <a href="#">东城</a>
+    <a href="#">东城</a>
+    <a href="#">东城</a>
+    <a href="#">东城</a>
+    <a href="#">东城</a>
+    <a href="#">东城</a>
+    <a href="#">东城</a>
+    <a href="#">东城</a>
+    <a href="#">东城</a>
+    <a href="#">东城</a>
+    <a href="#">东城</a>
+    <a href="#">东城</a>
+    <a href="#">东城</a>
+    <a href="#">东城</a>
+    <a href="#">东城</a>
+    <a href="#">东城</a>
+    <a href="#">东城</a>
+    <a href="#">东城</a>
+    <a href="#">东城</a>
+    <a href="#">东城</a>
+  </div>
+</div>
+
+
+
+
+
+
+
+<input id="whichDay" type="hidden" value="7d" >
+
+<div class="L_weather">
+  <div class="location"></div>
+  <div class="weather_tab">
+    <a href="#">今天</a>
+    <a href="#" class="m">1-7天</a>
+    <a href="#">8-15天</a>
+    <a href="#">40天</a>
+    <a href="#">专业产品</a>
+  </div>
+  <div class="fl weather_left">
+    <div class="weather_7d">
+      @@include('sevenDayComponents/blueForecast.html')
+    </div>
+    <div class="ad">
+      <img src="./i/ad.jpg" width="679" height="90">
+    </div>
+    <div class="weather_shzs">
+      <h1><b>生活指数</b><a href="#">定制我的指数</a><span>07:30更新</span></h1>
+      <ul>
+        <li>
+          <h2>紫外线指数</h2>
+          <span class="uv"></span>
+        </li>
+        <li>
+          <h2>感冒指数</h2>
+          <span class="gm"></span>
+        </li>
+        <li>
+          <h2>穿衣指数</h2>
+          <span class="cy"></span>
+        </li>
+        <li>
+          <h2>洗车指数</h2>
+          <span class="xc"></span>
+        </li>
+        <li>
+          <h2>运动指数</h2>
+          <span class="yd"></span>
+        </li>
+        <li class="m" style="width:115px;">
+          <h2 class="weather_air">空气污染<br>扩散指数</h2>
+          <span class="ks"></span>
+        </li>
+      </ul>
+      <div class="lv" style="display:block">
+        <dl>
+          <dt>
+            <span>02-13</span>
+            <em>最弱</em>
+          <p><i></i><i></i><i></i><i></i></p>
+          </dt>
+          <dd>辐射较弱，涂擦SPF12-15、PA+护肤品。</dd>
+        </dl>
+        <dl>
+          <dt>
+            <span>02-13</span>
+            <em>最弱</em>
+          <p><i></i><i></i><i></i><i></i></p>
+          </dt>
+          <dd>辐射较弱，涂擦SPF12-15、PA+护肤品。</dd>
+        </dl>
+        <dl>
+          <dt>
+            <span>02-13</span>
+            <em>最弱</em>
+          <p><i></i><i></i><i></i><i></i></p>
+          </dt>
+          <dd>天冷湿度大温差大，易感冒。</dd>
+        </dl>
+        <dl>
+          <dt>
+            <span>02-13</span>
+            <em>最弱</em>
+          <p><i></i><i></i><i></i><i></i></p>
+          </dt>
+          <dd>辐射较弱，涂擦SPF12-15、PA+护肤品。</dd>
+        </dl>
+        <dl>
+          <dt>
+            <span>02-13</span>
+            <em>最弱</em>
+          <p><i></i><i></i><i></i><i></i></p>
+          </dt>
+          <dd>辐射较弱，涂擦SPF12-15、PA+护肤品。</dd>
+        </dl>
+        <dl>
+          <dt>
+            <span>02-13</span>
+            <em>最弱</em>
+          <p><i></i><i></i><i></i><i></i></p>
+          </dt>
+          <dd>辐射较弱，涂擦SPF12-15、PA+护肤品。</dd>
+        </dl>
+      </div>
+      <div class="lv">
+        <dl>
+          <dt>
+            <span>02-13</span>
+            <em>最弱</em>
+            <i></i><i></i><i></i><i></i>
+          </dt>
+          <dd>辐射较弱，涂擦SPF12-15、PA+护肤品。</dd>
+        </dl>
+      </div>
+      <div class="lv">
+        <dl>
+          <dt>
+            <span>02-13</span>
+            <em>最弱</em>
+            <i></i><i></i><i></i><i></i>
+          </dt>
+          <dd>辐射较弱，涂擦SPF12-15、PA+护肤品。</dd>
+        </dl>
+      </div>
+      <div class="lv">
+        <dl>
+          <dt>
+            <span>02-13</span>
+            <em>最弱</em>
+            <i></i><i></i><i></i><i></i>
+          </dt>
+          <dd>辐射较弱，涂擦SPF12-15、PA+护肤品。</dd>
+        </dl>
+      </div>
+      <div class="lv">
+        <dl>
+          <dt>
+            <span>02-13</span>
+            <em>最弱</em>
+            <i></i><i></i><i></i><i></i>
+          </dt>
+          <dd>辐射较弱，涂擦SPF12-15、PA+护肤品。</dd>
+        </dl>
+      </div>
+      <div class="lv">
+        <dl>
+          <dt>
+            <span>02-13</span>
+            <em>最弱</em>
+            <i></i><i></i><i></i><i></i>
+          </dt>
+          <dd>辐射较弱，涂擦SPF12-15、PA+护肤品。</dd>
+        </dl>
+      </div>
+    </div>
+    <div class="weather_product">
+      <dl>
+        <dt><a href=""><img src="./i/pro.jpg"></a></dt>
+        <dd><a href="">未来3天降水预报图</a></dd>
+      </dl>
+      <dl style="float:right">
+        <dt><a href=""><img src="./i/pro.jpg"></a></dt>
+        <dd><a href="">未来3天降水预报图</a></dd>
+      </dl>
+    </div>
+    <div class="ad">
+      <img src="./i/ad.jpg">
+    </div>
+    <div class="history">
+      <img src="./i/history.png" width="680" height="390">
+    </div>
+    <div class="around">
+      <h1><span class="m">周边地区</span><span>周边景点</span><span>下辖地区</span><b>11:30更新</b></h1>
+      <ul style="display:block;">
+        <li>
+          <a href="http://www.weather.com.cn/weather1d/101220605.shtml#around2" target="_blank">
+            <span>怀宁</span>
+            <p class="img clearfix">
+              <big class="jpg30 d02"></big>
+              <em>/</em>
+              <big class="jpg30 n08"></big>
+            </p>
+            <i>0° <b>-16°</b></i>
+          </a>
+        </li>
+        <li>
+          <a href="http://www.weather.com.cn/weather1d/101220605.shtml#around2" target="_blank">
+            <span>怀宁</span>
+            <p class="img clearfix">
+              <big class="jpg30 d02"></big>
+              <em>/</em>
+              <big class="jpg30 n08"></big>
+            </p>
+            <i>0° <b>-16°</b></i>
+          </a>
+        </li>
+        <li>
+          <a href="http://www.weather.com.cn/weather1d/101220605.shtml#around2" target="_blank">
+            <span>怀宁</span>
+            <p class="img clearfix">
+              <big class="jpg30 d02"></big>
+              <em>/</em>
+              <big class="jpg30 n08"></big>
+            </p>
+            <i>0° <b>-16°</b></i>
+          </a>
+        </li>
+        <li>
+          <a href="http://www.weather.com.cn/weather1d/101220605.shtml#around2" target="_blank">
+            <span>怀宁</span>
+            <p class="img clearfix">
+              <big class="jpg30 d02"></big>
+              <em>/</em>
+              <big class="jpg30 n08"></big>
+            </p>
+            <i>0° <b>-16°</b></i>
+          </a>
+        </li>
+        <li>
+          <a href="http://www.weather.com.cn/weather1d/101220605.shtml#around2" target="_blank">
+            <span>怀宁</span>
+            <p class="img clearfix">
+              <big class="jpg30 d02"></big>
+              <em>/</em>
+              <big class="jpg30 n08"></big>
+            </p>
+            <i>0° <b>-16°</b></i>
+          </a>
+        </li>
+        <li>
+          <a href="http://www.weather.com.cn/weather1d/101220605.shtml#around2" target="_blank">
+            <span>怀宁</span>
+            <p class="img clearfix">
+              <big class="jpg30 d02"></big>
+              <em>/</em>
+              <big class="jpg30 n08"></big>
+            </p>
+            <i>0° <b>-16°</b></i>
+          </a>
+        </li>
+        <li>
+          <a href="http://www.weather.com.cn/weather1d/101220605.shtml#around2" target="_blank">
+            <span>怀宁</span>
+            <p class="img clearfix">
+              <big class="jpg30 d02"></big>
+              <em>/</em>
+              <big class="jpg30 n08"></big>
+            </p>
+            <i>0° <b>-16°</b></i>
+          </a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a href="http://www.weather.com.cn/weather1d/101220605.shtml#around2" target="_blank">
+            <span>怀宁</span>
+            <p class="img clearfix">
+              <big class="jpg30 d02"></big>
+              <em>/</em>
+              <big class="jpg30 n08"></big>
+            </p>
+            <i>2012°C</i>
+          </a>
+        </li>
+        <li>
+          <a href="http://www.weather.com.cn/weather1d/101220605.shtml#around2" target="_blank">
+            <span>怀宁</span>
+            <p class="img clearfix">
+              <big class="jpg30 d02"></big>
+              <em>/</em>
+              <big class="jpg30 n08"></big>
+            </p>
+            <i>20/12°C</i>
+          </a>
+        </li>
+        <li>
+          <a href="http://www.weather.com.cn/weather1d/101220605.shtml#around2" target="_blank">
+            <span>怀宁</span>
+            <p class="img clearfix">
+              <big class="jpg30 d02"></big>
+              <em>/</em>
+              <big class="jpg30 n08"></big>
+            </p>
+            <i>20/12°C</i>
+          </a>
+        </li>
+        <li>
+          <a href="http://www.weather.com.cn/weather1d/101220605.shtml#around2" target="_blank">
+            <span>怀宁</span>
+            <p class="img clearfix">
+              <big class="jpg30 d02"></big>
+              <em>/</em>
+              <big class="jpg30 n08"></big>
+            </p>
+            <i>20/12°C</i>
+          </a>
+        </li>
+        <li>
+          <a href="http://www.weather.com.cn/weather1d/101220605.shtml#around2" target="_blank">
+            <span>怀宁</span>
+            <p class="img clearfix">
+              <big class="jpg30 d02"></big>
+              <em>/</em>
+              <big class="jpg30 n08"></big>
+            </p>
+            <i>20/12°C</i>
+          </a>
+        </li>
+        <li>
+          <a href="http://www.weather.com.cn/weather1d/101220605.shtml#around2" target="_blank">
+            <span>怀宁</span>
+            <p class="img clearfix">
+              <big class="jpg30 d02"></big>
+              <em>/</em>
+              <big class="jpg30 n08"></big>
+            </p>
+            <i>20/12°C</i>
+          </a>
+        </li>
+        <li>
+          <a href="http://www.weather.com.cn/weather1d/101220605.shtml#around2" target="_blank">
+            <span>怀宁</span>
+            <p class="img clearfix">
+              <big class="jpg30 d02"></big>
+              <em>/</em>
+              <big class="jpg30 n08"></big>
+            </p>
+            <i>20/12°C</i>
+          </a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a href="http://www.weather.com.cn/weather1d/101220605.shtml#around2" target="_blank">
+            <span>怀宁</span>
+            <p class="img clearfix">
+              <big class="jpg30 d02"></big>
+              <em>/</em>
+              <big class="jpg30 n08"></big>
+            </p>
+            <i>2012°C</i>
+          </a>
+        </li>
+        <li>
+          <a href="http://www.weather.com.cn/weather1d/101220605.shtml#around2" target="_blank">
+            <span>怀宁</span>
+            <p class="img clearfix">
+              <big class="jpg30 d02"></big>
+              <em>/</em>
+              <big class="jpg30 n08"></big>
+            </p>
+            <i>20/12°C</i>
+          </a>
+        </li>
+        <li>
+          <a href="http://www.weather.com.cn/weather1d/101220605.shtml#around2" target="_blank">
+            <span>怀宁</span>
+            <p class="img clearfix">
+              <big class="jpg30 d02"></big>
+              <em>/</em>
+              <big class="jpg30 n08"></big>
+            </p>
+            <i>20/12°C</i>
+          </a>
+        </li>
+        <li>
+          <a href="http://www.weather.com.cn/weather1d/101220605.shtml#around2" target="_blank">
+            <span>怀宁</span>
+            <p class="img clearfix">
+              <big class="jpg30 d02"></big>
+              <em>/</em>
+              <big class="jpg30 n08"></big>
+            </p>
+            <i>20/12°C</i>
+          </a>
+        </li>
+        <li>
+          <a href="http://www.weather.com.cn/weather1d/101220605.shtml#around2" target="_blank">
+            <span>怀宁</span>
+            <p class="img clearfix">
+              <big class="jpg30 d02"></big>
+              <em>/</em>
+              <big class="jpg30 n08"></big>
+            </p>
+            <i>20/12°C</i>
+          </a>
+        </li>
+        <li>
+          <a href="http://www.weather.com.cn/weather1d/101220605.shtml#around2" target="_blank">
+            <span>怀宁</span>
+            <p class="img clearfix">
+              <big class="jpg30 d02"></big>
+              <em>/</em>
+              <big class="jpg30 n08"></big>
+            </p>
+            <i>20/12°C</i>
+          </a>
+        </li>
+        <li>
+          <a href="http://www.weather.com.cn/weather1d/101220605.shtml#around2" target="_blank">
+            <span>怀宁</span>
+            <p class="img clearfix">
+              <big class="jpg30 d02"></big>
+              <em>/</em>
+              <big class="jpg30 n08"></big>
+            </p>
+            <i>20/12°C</i>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="ad">
+      <img src="./i/ad.jpg">
+    </div>
+    <div class="weather_gqtj">
+      <h1>高清图集</h1>
+      <div id="container">
+        <div id="scroll">
+          <div class="child">
+            <dl>
+              <dt>
+              <ul>
+                <li>
+                  <a href="#"><img src="./i/ct.png"></a>
+                  <b>内蒙古多地迎新年首场雪　</b>
+                </li>
+                <li>
+                  <a href="#"><img src="./i/ct.png"></a>
+                  <b>内蒙古多地迎新年首场雪　</b>
+                </li>
+                <li>
+                  <a href="#"><img src="./i/ct.png"></a>
+                  <b>内蒙古多地迎新年首场雪　</b>
+                </li>
+                <li>
+                  <a href="#"><img src="./i/ct.png"></a>
+                  <b>内蒙古多地迎新年首场雪　</b>
+                </li>
+              </ul>
+              </dt>
+              <dd>
+                <a href="#"><img src="./i/ct.png" width="330" height="250"></a>
+                <b>内蒙古多地迎新年首场雪</b>
+              </dd>
+            </dl>
+          </div>
+          <div class="child">
+            <dl>
+              <dt>
+              <ul>
+                <li>
+                  <a href="#"><img src="./i/ct.png"></a>
+                  <b>内蒙古多地迎新年首场雪　</b>
+                </li>
+                <li>
+                  <a href="#"><img src="./i/ct.png"></a>
+                  <b>内蒙古多地迎新年首场雪　</b>
+                </li>
+                <li>
+                  <a href="#"><img src="./i/ct.png"></a>
+                  <b>内蒙古多地迎新年首场雪　</b>
+                </li>
+                <li>
+                  <a href="#"><img src="./i/ct.png"></a>
+                  <b>内蒙古多地迎新年首场雪　</b>
+                </li>
+              </ul>
+              </dt>
+              <dd>
+                <a href="#"><img src="./i/ct.png" width="330" height="250"></a>
+                <b>内蒙古多地迎新年首场雪</b>
+              </dd>
+            </dl>
+          </div>
+          <div class="child">
+            <dl>
+              <dt>
+              <ul>
+                <li>
+                  <a href="#"><img src="./i/ct.png"></a>
+                  <b>内蒙古多地迎新年首场雪　</b>
+                </li>
+                <li>
+                  <a href="#"><img src="./i/ct.png"></a>
+                  <b>内蒙古多地迎新年首场雪　</b>
+                </li>
+                <li>
+                  <a href="#"><img src="./i/ct.png"></a>
+                  <b>内蒙古多地迎新年首场雪　</b>
+                </li>
+                <li>
+                  <a href="#"><img src="./i/ct.png"></a>
+                  <b>内蒙古多地迎新年首场雪　</b>
+                </li>
+              </ul>
+              </dt>
+              <dd>
+                <a href="#"><img src="./i/ct.png" width="330" height="250"></a>
+                <b>内蒙古多地迎新年首场雪</b>
+              </dd>
+            </dl>
+          </div>
+          <div class="child">
+            <dl>
+              <dt>
+              <ul>
+                <li>
+                  <a href="#"><img src="./i/ct.png"></a>
+                  <b>内蒙古多地迎新年首场雪　</b>
+                </li>
+                <li>
+                  <a href="#"><img src="./i/ct.png"></a>
+                  <b>内蒙古多地迎新年首场雪　</b>
+                </li>
+                <li>
+                  <a href="#"><img src="./i/ct.png"></a>
+                  <b>内蒙古多地迎新年首场雪　</b>
+                </li>
+                <li>
+                  <a href="#"><img src="./i/ct.png"></a>
+                  <b>内蒙古多地迎新年首场雪　</b>
+                </li>
+              </ul>
+              </dt>
+              <dd>
+                <a href="#"><img src="./i/ct.png" width="330" height="250"></a>
+                <b>内蒙古多地迎新年首场雪</b>
+              </dd>
+            </dl>
+          </div>
+          <div class="child">
+            <dl>
+              <dt>
+              <ul>
+                <li>
+                  <a href="#"><img src="./i/ct.png"></a>
+                  <b>内蒙古多地迎新年首场雪　</b>
+                </li>
+                <li>
+                  <a href="#"><img src="./i/ct.png"></a>
+                  <b>内蒙古多地迎新年首场雪　</b>
+                </li>
+                <li>
+                  <a href="#"><img src="./i/ct.png"></a>
+                  <b>内蒙古多地迎新年首场雪　</b>
+                </li>
+                <li>
+                  <a href="#"><img src="./i/ct.png"></a>
+                  <b>内蒙古多地迎新年首场雪　</b>
+                </li>
+              </ul>
+              </dt>
+              <dd>
+                <a href="#"><img src="./i/ct.png" width="330" height="250"></a>
+                <b>内蒙古多地迎新年首场雪</b>
+              </dd>
+            </dl>
+          </div>
+
+        </div>
+        <a href="" id="btn_prev" class="btn">prev</a>
+        <a href="" id="btn_next" class="btn">next</a>
+        <div id="slider_bar"></div>
+
+      </div>
+    </div>
+    <div class="weather_case">
+      <h1>近期重大天气事件</h1>
+      <ul>
+        <li class=""> <a href="http://news.weather.com.cn/2017/04/2686312.shtml" target="_blank">
+          <p class="weather_y"><b class="weather_image"></b><span class="weather_image">4月6日</span></p>
+          <img src="http://i.weather.com.cn/images/cn/news/2017/04/06/06072154114C8047CFB949B778A7584BB98A5FA9.jpg" alt="今明天北京空气污染将加重 周末好转以晴为主" width="120" height="90">
+          <div>
+            <h2> 今明天北京空气污染将加重 周末好转以晴为主 </h2>
+            <p>今天（6日）夜间至明天前半夜北京污染扩散条件将转差，空气污染程度加重。周末天气以晴为主，较适宜户外活动和出行。</p>
+          </div>
+        </a> </li>
+        <li class=""> <a href="http://news.weather.com.cn/2017/04/2686312.shtml" target="_blank">
+          <p class="weather_y"><b class="weather_image"></b><span class="weather_image">4月6日</span></p>
+          <img src="http://i.weather.com.cn/images/cn/news/2017/04/06/06072154114C8047CFB949B778A7584BB98A5FA9.jpg" alt="今明天北京空气污染将加重 周末好转以晴为主" width="120" height="90">
+          <div>
+            <h2> 今明天北京空气污染将加重 周末好转以晴为主 </h2>
+            <p>今天（6日）夜间至明天前半夜北京污染扩散条件将转差，空气污染程度加重。周末天气以晴为主，较适宜户外活动和出行。</p>
+          </div>
+        </a> </li>
+        <li class=""> <a href="http://news.weather.com.cn/2017/04/2686312.shtml" target="_blank">
+          <p class="weather_y"><b class="weather_image"></b><span class="weather_image">4月6日</span></p>
+          <img src="http://i.weather.com.cn/images/cn/news/2017/04/06/06072154114C8047CFB949B778A7584BB98A5FA9.jpg" alt="今明天北京空气污染将加重 周末好转以晴为主" width="120" height="90">
+          <div>
+            <h2> 今明天北京空气污染将加重 周末好转以晴为主 </h2>
+            <p>今天（6日）夜间至明天前半夜北京污染扩散条件将转差，空气污染程度加重。周末天气以晴为主，较适宜户外活动和出行。</p>
+          </div>
+        </a> </li>
+        <li class=""> <a href="http://news.weather.com.cn/2017/04/2686312.shtml" target="_blank">
+          <p class="weather_y"><b class="weather_image"></b><span class="weather_image">4月6日</span></p>
+          <img src="http://i.weather.com.cn/images/cn/news/2017/04/06/06072154114C8047CFB949B778A7584BB98A5FA9.jpg" alt="今明天北京空气污染将加重 周末好转以晴为主" width="120" height="90">
+          <div>
+            <h2> 今明天北京空气污染将加重 周末好转以晴为主 </h2>
+            <p>今天（6日）夜间至明天前半夜北京污染扩散条件将转差，空气污染程度加重。周末天气以晴为主，较适宜户外活动和出行。</p>
+          </div>
+        </a> </li>
+        <li class=""> <a href="http://news.weather.com.cn/2017/04/2686312.shtml" target="_blank">
+          <p class="weather_y"><b class="weather_image"></b><span class="weather_image">4月6日</span></p>
+          <img src="http://i.weather.com.cn/images/cn/news/2017/04/06/06072154114C8047CFB949B778A7584BB98A5FA9.jpg" alt="今明天北京空气污染将加重 周末好转以晴为主" width="120" height="90">
+          <div>
+            <h2> 今明天北京空气污染将加重 周末好转以晴为主 </h2>
+            <p>今天（6日）夜间至明天前半夜北京污染扩散条件将转差，空气污染程度加重。周末天气以晴为主，较适宜户外活动和出行。</p>
+          </div>
+        </a> </li>
+        <li class=""> <a href="http://news.weather.com.cn/2017/04/2686312.shtml" target="_blank">
+          <p class="weather_y"><b class="weather_image"></b><span class="weather_image">4月6日</span></p>
+          <img src="http://i.weather.com.cn/images/cn/news/2017/04/06/06072154114C8047CFB949B778A7584BB98A5FA9.jpg" alt="今明天北京空气污染将加重 周末好转以晴为主" width="120" height="90">
+          <div>
+            <h2> 今明天北京空气污染将加重 周末好转以晴为主 </h2>
+            <p>今天（6日）夜间至明天前半夜北京污染扩散条件将转差，空气污染程度加重。周末天气以晴为主，较适宜户外活动和出行。</p>
+          </div>
+        </a> </li>
+      </ul>
+    </div>
+    <div class="weather_mores">
+      <a href="#">查看更多></a>
+    </div>
+  </div>
+  <div class="fr weather_right">
+    <div class="weather_gdt">
+      <div class="weather_g">
+
+
+
+        <div class="pic">
+          <div id='scrollPic' class="m">
+            <ul class="bigImg clearfix">
+
+
+              <li><a href="http://p.weather.com.cn/2017/04/2686333.shtml" target="_blank"><img src="http://i.weather.com.cn/images/cn/public/2017/04/06/06090702E219107DAB9A10AD3F253352D198E424.jpg" alt="贵阳上演现实版冰河世纪 雷雨冰雹齐袭" width="280" height="210"></a></li>
+
+              <li><a href="http://p.weather.com.cn/2017/04/2685902.shtml" target="_blank"><img src="http://i.weather.com.cn/images/cn/public/2017/04/05/05173519E6261C84C81C1EF7B8633AF5DE30F8F8.jpg" alt="春风又绿颐和园 九组图看皇家园林冬春对比" width="280" height="210"></a></li>
+
+              <li><a href="http://p.weather.com.cn/2017/03/2683162.shtml" target="_blank"><img src="http://i.weather.com.cn/images/cn/index/2017/04/05/05135224BECF87751EBCF6DCE5F55E4B1C271A05.jpg" alt="最美的约定：二十四番花信风" width="280" height="210"></a></li>
+
+              <li><a href="http://p.weather.com.cn/2017/04/2684337.shtml" target="_blank"><img src="http://i.weather.com.cn/images/cn/public/2017/04/05/05144634FD2689063EDE4993AB34B7EE3DAE4B1C.jpg" alt="骗你没商量 你能找到图中“隐身”的动物吗" width="280" height="210"></a></li>
+
+              <li><a href="http://www.weather.com.cn/zt/tqzt/2678413.shtml" target="_blank"><img src="http://i.weather.com.cn/images/cn/public/2017/04/05/051456565F57F845FA5CBCC669779A4B5AEB610D.jpg" alt="从南到北 看春天的脚步到哪里了" width="280" height="210"></a></li>
+
+              <li><a href="http://p.weather.com.cn/2017/01/2651089.shtml" target="_blank"><img src="http://i.weather.com.cn/images/hunan/hnsy/2017/04/05/05145025F40CFDA6BBCE8732656D0D725D402DD8.jpg" alt="惊呆了！很少人见过的诡异天象奇观 " width="280" height="210"></a></li>
+
+            </ul>
+
+            <ul class="botIcon clearfix">
+            </ul>
+            <p></p>
+            <div class="bottomBg"></div>
+            <div class="rollLeft weather_image"></div>
+            <div class="rollRight weather_image"></div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="weather_list">
+        <ul>
+          <li><a href="#">另类的美 北极冰层消融景观</a></li>
+          <li><a href="#">黑龙江雪乡的雪 能有多厚？</a></li>
+          <li><a href="#">60岁环卫老人的春节-37℃清运垃圾</a></li>
+          <li><a href="#">长江索道半日载客上万 游客排队2小时</a></li>
+        </ul>
+      </div>
+      <div class="pic_more">
+        <a href="#">进入图片频道></a>
+      </div>
+    </div>
+    <div class="weather_hot">
+      <div class="weather_rd">
+        <h1><b>热点</b><i class="weather_image"></i><span><a href="#" class="m">文章</a><a href="#" style="border-left:1px solid #dfdfdf; border-right:1px solid #dfdfdf;">图片</a><a href="#">视频</a></span></h1>
+        <ul class="clear" style=" display:block">
+          <li class="move"><span class="weather_image">1</span><a href="#">新闻联播天气预报</a></li>
+          <li class="move"><span class="weather_image">2</span><a href="#">百年最强厄尔尼诺将持续至今年5月</a></li>
+          <li class="move"><span class="weather_image">3</span><a href="#">天气美女爆：想防晒？地面也会biu ...</a></li>
+          <li><span class="weather_image">4</span><a href="#">立春时节话“咬春”</a></li>
+          <li><span class="weather_image">5</span><a href="#">滑雪者坠落46米深崖</a></li>
+        </ul>
+        <ul class="clear">
+          <li class="move"><span class="weather_image">1</span><a href="#">新闻联播天气预报</a></li>
+          <li class="move"><span class="weather_image">2</span><a href="#">百年最强厄尔尼诺将持续至今年5月</a></li>
+          <li class="move"><span class="weather_image">3</span><a href="#">天气美女爆：想防晒？地面也会biu ...</a></li>
+          <li><span class="weather_image">4</span><a href="#">立春时节话“咬春”</a></li>
+          <li><span class="weather_image">5</span><a href="#">滑雪者坠落46米深崖</a></li>
+        </ul>
+        <ul class="clear">
+          <li class="move"><span class="weather_image">1</span><a href="#">新闻联播天气预报</a></li>
+          <li class="move"><span class="weather_image">2</span><a href="#">百年最强厄尔尼诺将持续至今年5月</a></li>
+          <li class="move"><span class="weather_image">3</span><a href="#">天气美女爆：想防晒？地面也会biu ...</a></li>
+          <li><span class="weather_image">4</span><a href="#">立春时节话“咬春”</a></li>
+          <li><span class="weather_image">5</span><a href="#">滑雪者坠落46米深崖</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ads">
+      <img src="./i/ad.png">
+    </div>
+    <div class="weather_ly">
+      <h1>
+        <i></i>生活<span>旅游</span>
+      </h1>
+      <div class="weather_lygdt">
+        <div class="pic travel">
+          <div class="scrollPic">
+            <ul class="bigImg clearfix">
+
+              <li><a href="http://www.weather.com.cn/life/2017/04/2685932.shtml" target="_blank"><img src="http://i.weather.com.cn/images/cn/life/2017/04/05/051124430B8DC58929E1DF8C8B82BB2A52528833.jpg" alt="清明养生四个字：清、闲、缓、端" width="280" height="210"  ></a></li>
+
+              <li><a href="http://www.weather.com.cn/life/2017/04/2682829.shtml" target="_blank"><img src="http://i.weather.com.cn/images/cn/life/2017/03/29/29094531FB082A7C9AE950AB196C4310152A6253.jpg" alt="清明过后不宜再“春捂” 别捂出“春火”了" width="280" height="210"  ></a></li>
+
+              <li><a href="http://www.weather.com.cn/life/2017/04/2682796.shtml" target="_blank"><img src="http://i.weather.com.cn/images/cn/life/2017/03/29/29091625EEB60498AF1F9C2693EA8F8808430400.jpg" alt="春季适当午睡最养生 午睡的注意事项及好处" width="280" height="210"  ></a></li>
+
+
+
+              <li><a href="http://www.weather.com.cn/life/2016/01/lyxx/2473046.shtml" target="_blank"><img src="http://i.weather.com.cn/images/cn/life/2016/02/24/A75F80272F484F0FC49E4C750B2A18D0.jpg" alt="只想带他去看看这广阔的世界" width="280" height="210"></a></li>
+
+              <li><a href="http://www.weather.com.cn/life/2016/07/2547755.shtml" target="_blank"><img src="http://i.weather.com.cn/images/cn/life/2016/07/04/04100328FA12175C657B07AE35839F709DBD934D.jpg" alt="那些与海相伴的日子里 你还好吗  " width="280" height="210"></a></li>
+
+              <li><a href="http://www.weather.com.cn/life/2016/01/lyxx/2483272.shtml" target="_blank"><img src="http://i.weather.com.cn/images/cn/trip/2016/01/15/D25805AB75BE2CAE2D663BEE5D8EB158.jpg" alt="最有远见的摄影作品" width="280" height="210"></a></li>
+
+
+            </ul>
+
+            <ul class="botIcon clearfix" style="display:none">
+            </ul>
+            <p></p>
+            <div class="bottomBg"></div>
+            <div class="rollLeft weather_image"></div>
+            <div class="rollRight weather_image"></div>
+          </div>
+        </div>
+      </div>
+      <ul>
+        <li><span class="weather_image"></span><a href="#">春节后收心大法：调解身心教你“满血复</a></li>
+        <li><span class="weather_image"></span><a href="#">春节后收心大法：调解身心教你“满血复</a></li>
+        <li><span class="weather_image"></span><a href="#">春节后收心大法：调解身心教你“满血复</a></li>
+        <li><span class="weather_image"></span><a href="#">春节后收心大法：调解身心教你“满血复</a></li>
+      </ul>
+    </div>
+    <div class="weather_qxcp">
+      <h1>气象<span>产品</span></h1>
+      <div class="weather_ldimg">
+        <a href="#"><img src="./i/product.jpg" width="280" height="256"></a>
+      </div>
+      <div class="weather_qg">
+        <h2>全国气温实况</h2>
+        <p><a href="#">全国最高温实况分布图</a></p>
+        <p><a href="#">全国最低温实况分布图</a></p>
+        <p><a href="#">平均气温实况分布图</a></p>
+        <h3>全国降水量实况</h3>
+        <p><a href="#">全国24小时降水量实况</a></p>
+        <p><a href="#">全国近10天降水量实况</a></p>
+        <p><a href="#">全国10天降水距平</a></p>
+      </div>
+    </div>
+    <div class="ads">
+      <img src="./i/ad.png">
+    </div>
+    <div class="weather_tg">
+      <img src="./i/cc.png">
+    </div>
+    <div class="weather_rmjd">
+      <h1 class="weather_image">热门景点</h1>
+      <div class="rmjd_tab">
+        <span style="width:70px;">景区</span>
+        <span style="width:170px;">天气气温</span>
+        <span style="width:59px; font-size:12px; line-height:15px; position: relative;    top: 10px;">旅游<br>指数</span>
+      </div>
+      <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="68">三亚</td>
+          <td width="79">29 ～18℃</td>
+          <td width="89">多云</td>
+          <td>适宜</td>
+        </tr>
+        <tr>
+          <td>三亚</td>
+          <td>29 ～18℃</td>
+          <td>多云</td>
+          <td>适宜</td>
+        </tr>
+        <tr>
+          <td>三亚</td>
+          <td>29 ～18℃</td>
+          <td>多云</td>
+          <td>适宜</td>
+        </tr>
+        <tr>
+          <td>三亚</td>
+          <td>29 ～18℃</td>
+          <td>多云</td>
+          <td>适宜</td>
+        </tr>
+        <tr>
+          <td>三亚</td>
+          <td>29 ～18℃</td>
+          <td>多云</td>
+          <td>适宜</td>
+        </tr>
+        <tr>
+          <td>三亚</td>
+          <td>29 ～18℃</td>
+          <td>多云</td>
+          <td>适宜</td>
+        </tr>
+      </table>
+      <div class="weather_jq">
+        <div class="weather_select_city">
+          <i class="weather_image"></i><span>北京</span>
+          <ul>
+            <li>北京</li>
+            <li>上海</li>
+            <li>北京</li>
+            <li>上海</li>
+            <li>北京</li>
+            <li>上海</li>
+            <li>北京</li>
+            <li>上海</li>
+            <li>北京</li>
+            <li>上海</li>
+          </ul>
+        </div>
+        <div class="weather_select_a">
+          <i class="weather_image"></i><span>5A</span>
+          <ul>
+            <li>5A</li>
+            <li>4A</li>
+            <li>3A</li>
+          </ul>
+        </div>
+        <div class="weather_select_jq">
+          <i class="weather_image"></i><span>景区</span>
+          <ul>
+            <li>北京</li>
+            <li>上海</li>
+          </ul>
+        </div>
+        <div class="weather_search weather_image">
+
+        </div>
+      </div>
+    </div>
+    <div class="ads">
+      <img src="./i/ad.png">
+    </div>
+    <div class="weather_code">
+      <img src="./i/ewm.jpg" width="301" height="379">
+    </div>
+  </div>
+</div>
+
+
+
+@@include('commom/footer.html')
+
+</body>
+</html>

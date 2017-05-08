@@ -1,0 +1,427 @@
+@import "mixin/mixin";
+.last-item{
+  border-right: none!important;
+}
+#ascrail2000-hr{
+  margin-top: 8px;
+}
+.drawTF{
+  position: absolute;
+  top: 129px;
+  left: 6px;
+
+}
+.blueFor-container{
+  position: relative;
+  @include wh(687px, 794px);
+  .click_wrap , .click_wrap_f{
+    position: absolute;
+    top:70px;
+    left: 2px;
+    li{
+      @include wh(85px,325px);
+      cursor: pointer;
+      float: left;
+    }
+  }
+  .date-container{
+    height: 62px;
+    color: #999;
+    .active{
+      color: #3783c2!important;
+    }
+    .date-item{
+      position: relative;
+      @include wh(85px, 68px);
+      float: left;
+      text-align: center;
+      background-color: #eef7fd;
+      border-right: 1px solid #dce7ef;
+      .date-bottom-blue{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        @include wh(85px, 4px);
+        border-right: 1px solid #4085e4;
+        background-color: #458ff1;
+      }
+      .date-bottom-active{
+        background-color: RGB(232,145,76);
+      }
+      .date{
+        height:28px;
+        margin-top: 5px;
+        line-height: 28px;
+        font-size: 18px;
+        font-weight: 400;
+      }
+      .date-info{
+        height: 22px;
+        line-height: 22px;
+        font-size: 12px;
+      }
+    }
+  }
+}
+.blue-container{
+  height: 328px;
+  margin-top: 8px;
+  border-bottom: 4px solid #c0d9f2;
+  position: relative;
+  color: #7d7d7d;
+  .drawTwo-container{
+    @include wh(687px, 143px);
+    position: absolute;
+    top:143px;
+    left: 0;
+  }
+  .blue-item{
+    cursor: pointer;
+    @include wh(85px, 310px);
+    background-color: #ffffff;
+    position: relative;
+    margin: 0px 1px 1px 0;
+    float: left;
+    padding-top: 15px;
+    .item-icon{
+      @include wh(35px, 35px);
+      display: block;
+      //background: url("../i/icon.png") no-repeat center;
+      margin: 0 auto;
+      margin-bottom: 5px;
+    }
+    .weather-info{
+      height: 26px;
+      line-height: 26px;
+      font-size: 12px;
+      text-align: center;
+    }
+    .curve-container{
+      height: 143px;
+    }
+    .wind-container{
+      height: 20px;
+      width: 100%;
+      padding-top: 12px;
+      padding-left: 19px;
+      background-color: rgba(235, 235, 235, 0.1);
+    }
+    .wind-info{
+        height: 32px;
+        line-height: 32px;
+        text-align: center;
+        font-size: 12px;
+      }
+    .item-active{
+      position: absolute;
+      bottom: -28px;
+      left: 0;
+      @include wh(85px, 28px);
+      background: url("../i/down.png") no-repeat center;
+    }
+    .item-active-71d{
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      @include wh(85px, 4px);
+      background: #e8914c
+    }
+  }
+  .blue-item-last{
+    margin-right: 0px;
+  }
+  .active{
+    background-color: RGB(225,237,250);
+  }
+}
+.sky{
+  color: #ffffff;
+  .lv1{
+    FILTER:progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#0e7fdf,endColorStr=#69b8f0);
+    background: -ms-linear-gradient(top,#0e7fdf,#69b8f0);
+    background: -moz-linear-gradient(top,#0e7fdf,#69b8f0);
+    background: -webkit-gradient(linear,0% 0,0% 100%,from(#0e7fdf),to(#69b8f0));
+    background: -o-linear-gradient(top,#0e7fdf,#69b8f0);
+  }
+  .lv2{
+    FILTER:progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#50b2fb,endColorStr=#a6d4f6);
+    background: -ms-linear-gradient(top,#50b2fb,#a6d4f6);
+    background: -moz-linear-gradient(top,#50b2fb,#a6d4f6);
+    background: -webkit-gradient(linear,0% 0,0% 100%,from(#50b2fb),to(#a6d4f6));
+    background: -o-linear-gradient(top,#50b2fb,#a6d4f6);
+  }
+  .lv3{
+    FILTER:progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#88a9ca,endColorStr=#bcd3e3);
+    background: -ms-linear-gradient(top,#88a9ca,#bcd3e3);
+    background: -moz-linear-gradient(top,#88a9ca,#bcd3e3);
+    background: -webkit-gradient(linear,0% 0,0% 100%,from(#88a9ca),to(#bcd3e3));
+    background: -o-linear-gradient(top,#88a9ca,#bcd3e3);
+  }
+  .lv4{
+    FILTER:progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#999691,endColorStr=#c5c5c5);
+    background:-ms-linear-gradient(top,#999691,#c5c5c5);
+    background:-moz-linear-gradient(top,#999691,#c5c5c5);
+    background:-webkit-gradient(linear,0% 0,0% 100%,from(#999691),to(#c5c5c5));
+    background:-o-linear-gradient(top,#999691,#c5c5c5)}
+  .yesterday{
+    /* older safari/Chrome browsers */
+    -webkit-opacity: 0.5;
+    /* Netscape and Older than Firefox 0.9 */
+    -moz-opacity: 0.5;
+    /* Safari 1.x (pre WebKit!) 老式khtml内核的Safari浏览器*/
+    -khtml-opacity: 0.5;
+    /* IE9 + etc...modern browsers */
+    opacity: .5;
+    /* IE 4-9 */
+    filter:alpha(opacity=50);
+    /*This works in IE 8 & 9 too*/
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    /*IE4-IE9*/
+    filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+    background:RGB(253,253,253);
+    opacity: 0.5;
+  }
+  .info-style{
+    color: RGB(206,206,206);
+  }
+}
+.details-container{
+  @include wh(660px, 400px);
+  padding: 0 14px 0 13px;
+  .header-container{
+    height: 73px;
+    line-height: 73px;
+    .title{
+      margin:0 20px 0 24px;
+      font-size: 18px;
+      color: #666;
+    }
+    .text{
+      margin-right: 56px;
+      font-size: 12px;
+      color:#cccccc;
+    }
+    .sunup{
+      margin-right: 11px;
+      color:#999 ;
+      font-size: 12px;
+      position: relative;
+      padding-right: 23px;
+      .sunup-icon{
+        position: absolute;
+        top: -5px;
+        left: -30px;
+        @include wh(26px, 25px);
+        display: inline-block;
+        background: url("http://i.tq121.com.cn/i/weather2017/weather.png") no-repeat center;
+      }
+      .up{
+        background-position: -479px -59px;
+      }
+      .down{
+        background-position: -481px -96px;
+      }
+      .time{
+        margin-left: 5px;
+        color:#e8914c;
+      }
+    }
+    .blue-switch{
+      position: relative;
+      padding-right: 46px;
+      margin-left: 20px;
+      font-size: 16px;
+      color: #356db7;
+      .switch-icon{
+        position: absolute;
+        top: 1px;
+        right: -10px;
+        display: inline-block;
+        @include wh(46px, 20px);
+        background: url("../i/switch-g.png") no-repeat center;
+        cursor: pointer;
+      }
+      .turn{
+        background-image: url(http://i.tq121.com.cn/i/weather2015/city/iconall.png?v=4);
+        background-repeat: no-repeat;
+        display: block;
+        background-position: -176px -786px;
+        margin-left: 5px;
+        cursor: pointer;
+        position: absolute;
+        top:1px;
+        right: -23px;
+        float: left;
+        height: 22px;
+        width: 44px;
+        i{
+          background-image: url(http://i.tq121.com.cn/i/weather2015/city/iconall.png?v=4);
+          background-repeat: no-repeat;
+          display: block;
+          background-position: -196px -765px;
+          height: 18px;
+          width: 18px;
+          position: absolute;
+          left: 0;
+          margin-left: 3px;
+          top: 1px;
+        }
+      }
+      .off{
+        background-position: -176px -810px;
+      }
+    }
+  }
+  .content-container{
+    position: relative;
+    height: 304px;
+    width: 100%;
+    overflow: hidden;
+    color: #666;
+    font-size: 12px;
+    .scroll-container{
+      width: 1306px;
+      .houers-container{
+        height: 27px;
+        line-height: 27px;
+        text-align: center;
+        background-color: #f2f2f5;
+        padding-left: 10px;
+        .houer-item{
+          float: left;
+          width: 54px;
+        }
+        .active{
+          color: #ffffff;
+          background: url("../i/houer-bg.png") no-repeat center;
+        }
+      }
+      .details-houers-container{
+        padding-left: 10px;
+        .details-item{
+          float: left;
+          width: 53px;
+          border-right: 1px solid #ffffff;
+          padding-top: 25px;
+          .item-icon{
+            @include wh(35px, 35px);
+            display: block;
+            //background: url("../i/icon.png") no-repeat center;
+            margin: 0 auto;
+          }
+          .curor{
+            height: 141px;
+          }
+          .wind-info, .wind-js{
+            height: 30px;
+            line-height: 30px;
+            font-size: 12px;
+            text-align: center;
+          }
+        }
+        .item-one{
+          background-color: #fbfbfb;
+        }
+        .active{
+          background: url(http://i.tq121.com.cn/i/weather2017/weather.png) no-repeat;
+          background-position: -279px -400px;
+        }
+      }
+      .content-shade{
+        position: absolute;
+        top:0;
+        left:0;
+        width: 1320px;
+        padding-left: 10px;
+        li{
+          width: 55px;
+          height: 300px;
+          cursor: pointer;
+          float: left;
+        }
+        .active{
+          FILTER:progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#c5c5c5,endColorStr=#999691);
+          background: -moz-linear-gradient(top,#c5c5c5,#999691);
+          background: -webkit-gradient(linear,0 0,0 100%,from(#c5c5c5),to(#999691))
+        }
+      }
+    }
+
+  }
+  .three-container{
+    position: relative;
+    height: 304px;
+    width: 100%;
+    overflow: hidden;
+    .houers-container {
+      height: 27px;
+      line-height: 27px;
+      text-align: center;
+      background-color: #f2f2f5;
+      .houer-item {
+        float: left;
+        width: 82px;
+      }
+      .active{
+        color: #fff;
+        background: url(http://i.tq121.com.cn/i/weather2017/weather.png) no-repeat;
+        background-position: -596px -139px;
+      }
+    }
+
+    .details-houers-container{
+
+      .details-item{
+        float: left;
+        width: 81px;
+        border-right: 1px solid #ffffff;
+        padding-top: 25px;
+        .item-icon{
+          @include wh(35px, 35px);
+          display: block;
+          //background: url("../i/icon.png") no-repeat center;
+          margin: 0 auto;
+          margin-bottom: 5px;
+        }
+        .curor{
+          height: 141px;
+        }
+        .wind-info, .wind-js{
+          height: 30px;
+          line-height: 30px;
+          font-size: 12px;
+          text-align: center;
+        }
+      }
+      .item-one{
+        background-color: #fbfbfb;
+      }
+      .last-details-item{
+        border-right: none;
+      }
+     .active{
+        background: url(http://i.tq121.com.cn/i/weather2017/weather.png) no-repeat;
+        background-position: -279px -400px;
+      }
+    }
+    .drawTE{
+      width: 650px;
+      height: 141px;
+      position: absolute;
+      top: 129px;
+      left: 6px;
+    }
+    .three-content-shade{
+      position: absolute;
+      top: 0px;
+      left: 1px;
+      li{
+        width: 82px;
+        height: 300px;
+        float: left;
+      }
+
+    }
+  }
+}
+

@@ -1,0 +1,433 @@
+@charset "utf-8";
+/* CSS Document */
+h1, h2, h3, h4, h5, h6 { font-weight: normal; }
+.weather_image { background: url(http://i.tq121.com.cn/i/weather2017/weather.png) no-repeat; }
+.L_weather { width: 1000px; margin: 0 auto; }
+.weather_left { width: 680px; }
+.weather_right { width: 300px; }
+.weather_tab { background: #133664; height: 40px; margin-bottom: 10px; }
+.weather_tab a { display: block; height: 40px; line-height: 40px; width: 140px; color: #fff; font-size: 18px; float: left; text-align: center; }
+.weather_tab a:hover { transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -webkit-transition: all 0.2s ease-in-out; -o-transition: all 0.2s ease-in-out; background: #e8914c }
+.weather_tab a.m { background: #e8914c }
+.weather_shzs { background: #fff; }
+.weather_shzs h1 { padding: 15px 20px 10px; font-size: 20px; height: 30px; font-weight: normal; }
+.weather_shzs h1 b { float: left; color: #123563; display: block; font-weight: normal; }
+.weather_shzs h1 span { float: right; font-size: 12px; color: #999999; }
+.weather_shzs h1 a { width: 125px; height: 25px; line-height: 25px; font-size: 12px; color: #fff; text-align: center; margin-left: 15px; background: #f8cc46; display: block; float: left; }
+.ad { width: 680px; height: 90px; overflow: hidden; margin-bottom: 10px; }
+.weather_shzs ul li { float: left; cursor: pointer; width: 113px; height: 130px; }
+.weather_shzs ul li h2 { color: #133563; text-align: center; font-size: 14px; font-weight: normal; height: 52px; line-height: 52px; }
+.weather_shzs ul li span { background: url(http://i.tq121.com.cn/i/weather2017/weather.png) no-repeat -187px -153px; display: block; margin: 0 auto; width: 60px; height: 60px; }
+.weather_shzs ul li h2.weather_air { line-height: 24px; }
+.weather_shzs ul li.m { background: #f0f7fc; }
+.weather_shzs ul li span.gm { background-position: -187px -83px }
+.weather_shzs ul li span.cy { background-position: -187px -223px }
+.weather_shzs ul li span.xc { background-position: -187px -13px }
+.weather_shzs ul li span.yd { background-position: -187px -363px }
+.weather_shzs ul li span.ks { background-position: -187px -293px }
+.weather_shzs ul li.m .uv { background-position: -97px -153px; }
+.weather_shzs ul li.m .gm { background-position: -97px -83px; }
+.weather_shzs ul li.m .cy { background-position: -97px -223px; }
+.weather_shzs ul li.m .xc { background-position: -97px -13px; }
+.weather_shzs ul li.m .yd { background-position: -97px -363px; }
+.weather_shzs ul li.m .ks { background-position: -97px -293px; }
+.weather_shzs .lv { clear: both; display: none; margin-bottom: 10px; background: #f0f7fc; height: 170px; }
+.weather_shzs .lv dl { width: 113px; float: left; }
+.weather_shzs .lv dl dt span { font-size: 12px; background: url(http://i.tq121.com.cn/i/weather2017/weather.png) -22px -17px; width: 50px; height: 18px; text-align: center; color: #fff; margin: 0 auto; margin-bottom: 10px; display: block; }
+.weather_shzs .lv dl dt em { font-size: 16px; color: #e8914c; text-align: center; display: block; }
+.weather_shzs .lv dl dt p i { display: block; width: 6px; height: 6px; background: #ccc; margin-right: 6px; display: block; float: left; margin-top:10px; }
+.weather_shzs .lv dl { padding-top: 15px; }
+.weather_shzs .lv dl dt p { text-align: center; height: 30px; margin-left:35px; }
+.weather_shzs .lv dl dd { color: #999999; font-size: 12px; text-align: left; line-height: 20px; width:85px;
+margin:0 auto; }
+.weather_product dl { width: 328px; background: #367fd8; border: 1px solid #367fd8; float: left; }
+.weather_product dl dd { height: 40px; line-height: 40px; font-size: 18px; color: #fff; text-align: center; }
+.weather_product dl dd a { color: #fff; }
+.weather_product { height: 300px; margin-bottom: 10px; }
+.history { height: 390px; margin-bottom: 10px; }
+.weather_left .around ul li { border: 1px solid #6bb0d9; float: left; font-size: 16px; height: 53px; line-height: 53px; margin-right: 10px; margin-top: 7px; width: 332px; }
+.weather_left .around ul { width:690px; display: none }
+.weather_left .around ul li a { cursor: pointer; display: block; text-decoration: none; }
+.weather_left .around ul li { border: 1px solid #eee; background: #fff; }
+.weather_left .around ul li span { float: left; margin-left: 21px; overflow: hidden; text-decoration: none; color: #333; text-overflow: ellipsis; white-space: nowrap; width: 115px; }
+.weather_left .around ul li .img { float: left; text-decoration: none; width: 73px; }
+.weather_left .around ul li .img big { display: inline-block; float: left; margin-top: 12px; }
+.weather_left .around ul li .img em { color: #6bb0d9; float: left; overflow: hidden; text-decoration: none; width: 10px; }
+.weather_left .around ul li .img big { display: inline-block; float: left; margin-top: 12px; }
+.weather_left .around ul li i { background: none; display: inline-block; margin-left: 30px; text-decoration: none; font-size: 18px; font-style: normal }
+.weather_left .around ul li i b { color: #528bd2; font-weight: normal; padding-left: 7px; }
+.weather_left .around h1 span { font-size: 20px; cursor: pointer; display: block; float: left; width: 80px; margin-left: 20px; height: 50px; color: #133563 }
+.weather_left .around h1 span.m { border-bottom: 4px solid #356db7; color: #356db7; }
+.weather_left .around h1 b { float: right; font-size: 12px; display: block; height: 60px; font-weight: normal; margin-right: 10px; line-height: 60px; color: #356db6; }
+.weather_left .around h1 { height: 60px; line-height: 60px; }
+.weather_left .around { background: #fbfbfb; margin-bottom: 10px; float: left; width:680px; overflow:hidden; }
+.weather_gdt { margin-bottom: 10px; background: url(http://i.tq121.com.cn/i/weather2017/weather.png) no-repeat -973px -132px; height: 430px; }
+.weather_g { padding-top: 20px; margin-left: 10px; }
+.weather_list ul li a { font-size: 14px; line-height: 30px; margin-left: 15px; }
+.pic_more a { display: block; height: 45px; line-height: 45px; font-size: 12px; width: 280px; margin: 0 auto; text-align: right }
+.weather_hot { background: #dfdfdf; padding: 10px; margin-bottom: 10px; }
+.weather_hot .weather_rd { background: #ffffff; }
+.weather_hot .weather_rd ul li { overflow:hidden; height: 49px; border-bottom: 1px solid #dfdfdf; line-height: 49px; }
+.weather_hot .weather_rd ul li:hover { background: #e0f0fa }
+.weather_hot .weather_rd ul li a { font-size: 14px; display: block; width: 240px; float: right; }
+.weather_hot .weather_rd ul li span { float: left; width: 23px; line-height: 22px; margin-left: 10px; margin-top: 13px; text-align: center; height: 22px; display:inline; }
+.weather_hot .weather_rd ul li span { background-position: -712px -19px; color: #fff; }
+.weather_hot .weather_rd ul li.move span { background-position: -712px -60px; color: #fff; }
+.weather_hot .weather_rd h1 { font-size: 20px; background-position: -712px -60px; color: #0f2e58; }
+.weather_hot .weather_rd h1 b { color: #0f2e58; float: left; width: 66px; text-align: center; height: 65px; line-height: 65px; font-size: 20px; }
+.weather_hot .weather_rd h1 i { display: block; width: 25px; height: 25px; margin-top: 20px; background-position: -670px -20px; float: left; }
+.weather_hot .weather_rd h1 span { display: block; padding-top: 20px; float: right; }
+.weather_hot .weather_rd h1 span a { display: block; float: left; width: 50px; text-align: center; font-size: 14px; color: #999999; }
+.weather_hot .weather_rd h1 span a.m { color: #ed662c; }
+.weather_hot .weather_rd h1 span a:hover { color: #ed662c; }
+.ads { height: 250px; margin-bottom: 10px; overflow: hidden; }
+.weather_ly ul li { height: 32px; line-height: 32px; }
+.weather_ly ul li a { height: 32px; line-height: 32px; font-size: 14px; display: block; float: left; margin-left: 10px; }
+.weather_ly ul li span { float: left; margin-left: 10px; display: block; background-position: -950px -37px; height: 30px; width: 9px; }
+.weather_ly { margin-bottom: 10px; }
+.weather_ldimg { padding: 10px; background: #dfdfdf; margin-bottom: 10px; }
+.weather_tg { height: 170px; width: 300px; margin-bottom: 10px; }
+.weather_rmjd h1 { height: 100px; font-size: 24px; color: #fff; line-height: 158px; text-indent: 16px; background-position: -973px -18px; }
+.weather_rmjd { height: auto; margin-bottom: 10px; }
+.rmjd_tab { background: url(http://i.tq121.com.cn/i/weather2017/weather.png) -939px -674px #206dbd; height: 50px; line-height: 50px; }
+.rmjd_tab span { color: #fff; text-align: center; display: block; float: left; font-size: 14px; }
+.weather_rmjd table { background: #fff }
+.weather_rmjd table tr td { text-align: center; font-size: 14px; border-left: 1px solid #ebebeb; border-bottom: 1px solid #ebebeb; padding: 10px 0px; }
+.weather_rmjd table { border-right: 1px solid #ebebeb; }
+.weather_rmjd table tr:hover { background: #fadd7b }
+.weather_jq { height: 50px; background: #e0f0fa; }
+.weather_jq div { width: 80px; float: left; cursor: pointer; position: relative; }
+.weather_jq div span { display: block; float: left; height: 50px; width: 67px; text-align: center; line-height: 50px; }
+.weather_jq div i { background-position: -948px -17px; float: right; height: 10px; width: 13px; margin-top: 20px; position:relative; right:5px; }
+.weather_jq div.weather_search { background-position: -907px -9px; float: right; height: 20px; margin-right: 15px; margin-top: 14px; width: 20px; }
+.weather_jq div.weather_search:hover{ background-color:#fff;}
+.weather_jq div ul { height:150px; position: absolute; top: 50px; background: #e0f0fa; display:none; width:80px; }
+.weather_jq div.weather_select_a ul{ height:90px;}
+.weather_jq div ul li { width: 80px; line-height: 30px; text-align: center; border-bottom:1px solid #c4def6; }
+.weather_jq div ul li:hover{background:#c4def6}
+.weather_jq div:hover{
+	background:#c4def6}
+.weather_qg h2 { height: 40px; line-height: 40px; font-size: 18px; text-align: center; font-weight: normal; background: #dcf1f1; margin-bottom: 5px; }
+.weather_qg p a { display: block; height: 40px; line-height: 40px; text-align: center; font-size: 16px; background: #fff; margin-bottom: 5px; }
+.weather_qg h3 { height: 40px; line-height: 40px; font-size: 18px; text-align: center; font-weight: normal; background: #e0f0fa; margin-bottom: 5px; }
+.weather_qxcp { margin-bottom: 10px; }
+.weather_qxcp h1 { color: #0f2e58; font-size: 20px; height: 50px; line-height: 50px; }
+.weather_qxcp h1 span { color: #356db7; }
+.weather_ly h1 { color: #0f2e58; font-size: 20px; height: 50px; line-height: 50px; }
+.weather_ly h1 span { color: #356db7; }
+.weather_ly h1 i { float: right; display: block; background: url(http://i.tq121.com.cn/i/weather2017/weather.png) no-repeat -281px -360px; margin-top: 8px; width: 210px; height: 28px; }
+/*content start*/
+
+#scroll { width: 680px; height: 250px; overflow: hidden; }
+/* prev and next btn style */
+.btn { position: absolute; bottom: 20px; width: 30px; height: 61px; display: block; overflow: hidden; background: url(http://i.tq121.com.cn/i/weather2017/weather.png) no-repeat; cursor: pointer; text-indent: -999em; z-index: 10; }
+#btn_prev { left: 7px; background-position: -874px -199px; }
+#btn_next { right: 7px; background-position: -924px -199px }
+#btn_prev:hover { background-position: -874px -299px; }
+#btn_next:hover { background-position: -924px -299px }
+/* slider bar start*/
+#slider_bar { width: 100%; height: 22px; position: absolute; top: 18px; text-align: center; z-index: 100; }
+#slider_bar a { width: 10px; height: 10px; display: inline-block; overflow: hidden; background: url(http://i.tq121.com.cn/i/weather2017/weather.png) no-repeat -826px -109px; margin: 0px 3px; }
+#slider_bar a.cur, #slider_bar a:hover { background-position: -806px -109px; }
+#scroll .child { width: 680px; height: 419px; position: absolute; top: 0px; left: 680px; z-index: 10; display: block; }
+#scroll .child dl dt ul li a img { width: 160px; height: 120px; }
+#scroll .child dl dt ul li { position: relative; width: 160px; height: 120px; float: left; margin-left: 7px; margin-bottom: 10px; display: inline; overflow:hidden; }
+#scroll_wrapper { position: relative; top: 0px; }
+.weather_gqtj { height: 320px; border: 1px solid #367fd8; background: #fff; position: relative; margin-bottom: 10px; overflow:hidden; }
+.weather_gqtj h1 { text-indent: 20px; font-size: 20px; height: 57px; line-height: 57px; color: #123563 }
+#scroll .child dl dt { float: left; width: 336px; }
+#scroll .child dl dd { width: 330px; float: left; position: relative; margin-left: 5px; overflow:hidden;}
+#scroll .child dl dt ul li b { position: absolute; left: 0; bottom: 0px; color: #fff; font-weight: normal; padding: 0px 20px; text-align: center; background: url(http://i.tq121.com.cn/i/weather2017/weather_line.png) repeat-x; height: 47px; }
+#scroll .child dl dd b { position: absolute; left: 0; bottom: 20px; color: #fff; font-weight: normal; width: 100%; font-size: 18px; text-align: center }
+.weather_case h1 { font-size: 20px; height: 60px; text-indent: 14px; line-height: 60px; color: #123463; }
+.weather_case { background: #fff; border-left: 7px solid #e0f0fa; height: 820px; overflow:hidden }
+#scrollPic { height: 245px; overflow: hidden; position: relative; width: 280px; z-index: 0 }
+#scrollPic ul.bigImg { width: 1200px; position: absolute }
+#scrollPic ul.bigImg li { float: left; width: 280px; text-align: center }
+#scrollPic ul.botIcon { left: 0; position: absolute; top: 225px; width: 110px }
+#scrollPic ul.botIcon li { cursor: pointer; float: left; margin: 0 3px; width: 10px; height: 10px; background: url(http://i.tq121.com.cn/i/weather2017/weather.png) no-repeat -826px -109px; font: 0 }
+#scrollPic ul.botIcon li.on { background-position: -806px -109px; }
+#scrollPic p, #scrollPic .bottomBg { bottom: 35px; height: 30px; left: 0; line-height: 30px; position: absolute; width: 100% }
+#scrollPic p { color: #fff; overflow: hidden; text-align: center; text-overflow: ellipsis; white-space: nowrap; z-index: 1 }
+#scrollPic .bottomBg { background: url(http://i.tq121.com.cn/i/weather2017/weather_line.png) repeat-x; height: 59px; }
+.pic .rollLeft, .pic .rollRight { background-repeat: no-repeat; cursor: pointer; height: 61px; position: absolute; top: 70px; width: 30px; }
+.pic .rollLeft { background-position: -874px -199px; left: 0 }
+.pic .rollLeft:hover { background-position: -874px -299px; }
+.pic .rollRight { background-position: -924px -199px; right: 0 }
+.pic .rollRight:hover { background-position: -924px -299px; }
+.scrollPic { height: 210px; overflow: hidden; position: relative; width: 280px; margin: 0 auto }
+.scrollPic ul.bigImg { width: 1200px; position: absolute }
+.scrollPic ul.bigImg li { float: left }
+.scrollPic ul.bigImg li img { width: 280px; height: 210px }
+.scrollPic ul.botIcon { left: 0; position: absolute; top: 180px; width: 110px }
+.scrollPic ul.botIcon li { cursor: pointer; float: left; margin: 0 3px; width: 10px; height: 10px; background-position: -175px -73px; font: 0 }
+.scrollPic ul.botIcon li.on { background-position: -175px -92px }
+.scrollPic p, .scrollPic .bottomBg { bottom: 0; height: 30px; left: 0; line-height: 30px; position: absolute; width: 100% }
+.scrollPic p { color: #fff; overflow: hidden; text-align: center; text-overflow: ellipsis; white-space: nowrap; z-index: 1 }
+.scrollPic .bottomBg { background: url(http://i.tq121.com.cn/i/weather2017/weather_line.png) repeat-x; height: 59px; }
+.scrollPic ul.bigImg li { float: left; text-align: center; width: 280px; }
+.weather_lygdt { padding: 10px 0px; background: #dfdfdf; }
+.scrollPic ul.bigImg li a { margin: 0 }
+.weather_case ul { }
+.weather_case ul li { cursor: pointer; zoom: 1; height: 123px; position: relative;  }
+.weather_case ul li:after { clear: both; content: "."; display: block; height: 0; visibility: hidden }
+.weather_case ul li p.weather_y { text-align: right; float: left; font-size: 16px; padding-right: 3px; height: 20px; line-height: 20px }
+.weather_case ul li img { float: left; margin-top: 22px }
+.weather_case ul li div { position: relative; float: left; margin-top: 18px; margin-left: 20px; height: 90px; width: 410px; cursor: pointer }
+.weather_case ul li div h2 { font-size: 16px; width: 409px; color: #356db7; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; font-weight: bold }
+.weather_case ul li div h2 a { color: #076ea8 }
+.weather_case ul li a:hover p { color: #252525 }
+.weather_case ul li div p { font-size: 12px; line-height: 20px; height: 62px; overflow: hidden; width: 420px; margin-top: 5px; cursor: pointer; color: #666666; }
+.weather_case ul li div a.xq { position: absolute; right: 23px; bottom: 0; font-size: 13px; color: #8abb4a }
+.weather_case ul li a { display: block; height: 123px; }
+.weather_case ul li p.weather_y { cursor: pointer; width: 90px; margin: 52px 12px 0 -13px; color: #6d6d6d }
+.weather_case ul li.ons { background: #fbfbfb }
+.weather_case ul li.on { background: #e0f0fa }
+.weather_case ul li.on div p { color: #252525 }
+.weather_case ul li p.weather_y span { margin-left: 11px; display: block; width: 60px; height: 28px; line-height: 26px; text-align: center; color: #fff; font-size: 14px; background-position: -760px -59px; float: left; }
+.weather_case ul li p.weather_y b { display: block; float: left; width: 18px; height: 18px; background-position: -856px -16px; margin-top: 3px; }
+.weather_case ul li.on p.weather_y span { background-position: -760px -19px; }
+.weather_case ul li.on p.weather_y b { background-position: -856px -46px; }
+.weather_mores { height: 35px; line-height: 35px; }
+.weather_mores a { display: block; text-align: center; background: #fbfbfb; height: 35px; line-height: 35px; }
+.tong { width: 1000px; height: 90px; overflow: hidden; margin: 0 auto; }
+.weather_location { height: 30px; line-height: 30px; position: relative; }
+.weather_location { width: 1000px; margin: 0 auto; }
+.weather_location a { font-size: 14px; }
+.weather_location span i { background-position: -739px -94px; padding: 8px; }
+.weather_location span { }
+.weather_location span a { }
+.weather_lo_box { width: 250px; display: none; overflow: auto; background: #fff; border: 1px solid #dfdfdf; position: absolute; left: 45px; top: 28px; height: 185px; }
+.weather_lo_box a { display: block; text-align: center; width: 30%; float: left; }
+.weather_rd ul{ display:none}
+.weather_zdsk{
+	height:240px;
+	margin-bottom:10px;}
+.weather_his{
+	height:290px;
+	background:#fff;
+	margin-bottom:10px;
+	border:1px solid #eeeeee;}
+.weather_his h1{
+	height:55px;
+	line-height:55px;
+	font-size:20px;
+	color:#043467;
+	text-indent:20px;}
+.weather_his .weather_table tr th{
+	height:40px;
+	line-height:40px;
+	font-weight:normal;
+	font-size:12px;
+	color:#666666;
+	background:#d5e7fc}
+.weather_his .weather_table{
+	width:332px;}
+.weather_his .weather_table tr th span{
+color:#333333;
+font-size:14px;
+font-weight:bold}
+.weather_his .weather_table tr{
+	background:#f2f8ff
+	}
+
+.weather_his .weather_table tr td{
+	height:30px;
+	line-height:30px;
+	font-size:12px;
+	color:#333333;
+	text-align:center;
+	border-right:1px solid #fff;}
+
+.weather_his dl dt{
+	background-position:-858px -89px;
+	width:83px;
+	height:83px;}
+.weather_his dl dt span{
+	color:#fff;
+	font-size:12px;
+	text-align:center;
+	height:30px;
+	line-height:35px;
+	display:block}
+.weather_his dl dt b{
+	font-size:36px;
+	text-align:center;
+	color:#fff;
+	font-weight:normal;
+
+	display:block;}
+.weather_his dl{
+	height:84px;
+	margin-bottom:10px;
+	width:100%;
+	position:relative;}
+.weather_his dl dd{
+	float:right;
+	padding-left:45px;
+	height:83px;
+	width:580px;
+	background:#fff1bb;}
+.weather_his dl dt{
+	position:absolute;
+	top:0;
+	left:15px;
+	}
+.weather_his dl dd p{
+	width:142px;
+	height:50px;
+	padding:0px 25px;
+	margin:18px 0;
+	float:left;
+	border-right:1px solid #fddda1;
+	}
+.weather_his dl dd p span{
+color:#f58d39;
+text-align:right;
+float:left;
+padding-top:3px;
+width:70px;
+display:block;
+font-size:12px;
+}
+.weather_his dl dd p span em{
+	color:#333;
+	display:block;
+	font-size:16px;}
+.weather_his dl dd p b{
+	line-height: 52px;
+	float:right;
+	display:block;
+	font-size:30px;
+	font-weight:normal;}
+.weather_over{
+	width:678px;
+	margin:0 auto;
+	overflow:hidden;}
+#scroll .child dl dt ul li a img{transition:all 1.2s;transition:all 1.2s}
+#scroll .child dl dt ul li:hover img{-webkit-transform:scale(1.2);-ms-transform:scale(1.2);transform:scale(1.2)}
+#scroll .child dl dd a img{transition:all 1.2s;transition:all 1.2s}
+#scroll .child dl dd a:hover img{-webkit-transform:scale(1.2);-ms-transform:scale(1.2);transform:scale(1.2)}
+.weather_pplm{
+  background:#fff;
+  height:440px;
+  margin-bottom:10px;
+  border:1px solid #dfdfdf;}
+.weather_lmz{
+  width:375px;
+  float:left;
+  height:245px;
+  background-position:6px -518px;}
+.weather_lmz dl {
+  height:245px;
+  position:relative;}
+.weather_lmz dl dt{
+  float:right;
+  margin-top:18px;}
+.weather_lmy{
+  width:253px;
+  margin-left:15px;
+  float:left;}
+.weather_lmz dl dd{
+  position:absolute;
+  right:20px;
+  bottom:0px;}
+.weather_lmz dl dd a{
+  float:right;
+  margin-bottom:12px;
+  font-size:16px;
+  color:#fff;
+  display:block;}
+.weather_lmz dl dd a.wea_sjd{
+  width:110px;
+  height:20px;
+  color:#fff;
+  font-size:14px;
+  text-align:center;
+  background:#b95700;
+  line-height:20px;}
+.weather_lmy h1 a{
+  font-size:18px;
+
+  color:#ff5c00;}
+.weather_lmy h1{
+  line-height:20px;
+  margin-top:35px;
+  margin-bottom:15px;
+}
+.weather_lmy p{
+  font-size:12px;
+  color:#333;
+  margin-bottom:10px;}
+.weather_lmy ul li{
+  height:28px;
+  font-size:14px;
+  line-height:28px;}
+.weather_lmlist{
+  width:255px;
+  height:137px;
+  background:#f2f2f5;
+  margin-left: 10px;
+  margin-top: 10px;
+  float:left;}
+.weather_lmlist p a{
+  font-size:14px;}
+.weather_lmlist p{
+  line-height:28px;}
+.weather_lmlist {
+  padding-top:23px;}
+.weather_lmcy{
+  width:400px;
+  position:relative;
+  height:137px;
+  float:left;
+  margin-left:10px;
+  padding-top:23px;
+  display:inline;
+  background:#f2f2f5;
+  margin-top:10px;}
+.weather_lmcy dl{
+  width:375px;
+  margin:0 auto;}
+.weather_lmcy dl dt{
+  width:225px;
+  font-size:12px;
+  float:left;}
+.weather_lmcy dl dd{
+  float:right;
+  width:140px;
+  height:105px;}
+.weather_lmcy dl dd a img{
+  width:140px;
+  height:105px;}
+.weather_lmcy dl dd.wea_piao{
+  position:absolute;
+  left:14px;
+  bottom:0;
+  height:70px;
+  width:355px;
+  background-position:-400px -685px;}
+.weather_lmcy dl dd.wea_piao h1 a{
+  background:#043567;
+  font-size:14px;
+  display:block;
+  width:105px;
+  height:20px;
+  float:right;
+  text-align:center;
+  color:#fff;}
+.weather_lmcy dl dd.wea_piao h1{
+  height:20px;
+  padding-top:8px;
+  width:300px;
+  margin-bottom:5px;
+
+}
+.weather_lmcy dl dd.wea_piao h2{
+  color:#fff;
+  font-size:18px;}
+.weather_lmcy dl dd.wea_piao h2 a{
+  color:#fff;
+  font-size:18px;}
+.weather_lmcy dl dd.wea_piao h2 a:hover,.weather_lmcy dl dd.wea_piao h1 a:hover{
+  color:#ee842f}
